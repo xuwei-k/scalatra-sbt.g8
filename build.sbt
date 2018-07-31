@@ -10,3 +10,5 @@ val javaVmArgs: List[String] = {
 scriptedLaunchOpts ++= javaVmArgs.filter(
   a => Seq("-Xmx", "-Xms", "-XX", "-Dsbt.log.noformat").exists(a.startsWith)
 )
+
+enablePlugins(ScriptedPlugin)
